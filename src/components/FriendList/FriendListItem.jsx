@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import style from 'components/FriendList/friendList.module.css';
 
 export const FriendListItem = ({ friends}) => {
-    <div>
+    return (
+    
         <li className={style.item}>
           <span className={friends.isOnline ? style.online : style.offline}/>
             <img className={style.avatar}
@@ -11,7 +12,8 @@ export const FriendListItem = ({ friends}) => {
                 width="48" />
             <p className={style.name}>{friends.name}</p>
        </li>
-    </div>
+    
+ )
 }
 
 FriendListItem.protoTypes = {
