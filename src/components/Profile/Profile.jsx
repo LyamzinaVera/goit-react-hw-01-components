@@ -34,7 +34,7 @@ export const Profile = props => {
 )
 }
 
-Profile.propTypes = {
+Profile.protoTypes = {
   username: PropTypes.string,
   tag: PropTypes.string,
   location: PropTypes.string,

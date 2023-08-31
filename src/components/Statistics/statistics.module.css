@@ -1,0 +1,29 @@
+.container {
+    
+    padding: 50px;
+    background-color: rgb(250, 160, 228);
+    
+}
+
+.title {
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    border: 1px solid rgba(8, 1, 32, 0.507);
+    border-radius: 10px;
+
+}
+
+
+.list{
+    display: flex;
+    list-style: none;
+
+}
