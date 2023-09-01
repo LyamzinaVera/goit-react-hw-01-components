@@ -5,11 +5,11 @@ import style from 'components/Profile/profile.module.css'
 export const Profile = props => {
     return (
 <div className={style.container}>
-  <div>
+  <div className={style.description}>
     <img
       src={props.avatar}
       alt={props.username}
-      className={style.img}
+      className={style.avatar}
     />
     <p className={style.name}>{props.username}</p>
     <p className={style.tag}>{props.tag}</p>
@@ -17,15 +17,15 @@ export const Profile = props => {
   </div>
 
   <ul className={style.stats}>
-    <li>
+    <li className={style.followersList}>
       <span className={style.label}>Followers</span>
       <span className={style.quantity}>{props.stats.followers}</span>
     </li>
-    <li>
+    <li className={style.viewsList}>
       <span className={style.label}>Views</span>
       <span className={style.quantity}>{props.stats.views}</span>
     </li>
-    <li>
+    <li className={style.likesList}>
       <span className={style.label}>Likes</span>
       <span className={style.quantity}>{props.stats.likes}</span>
     </li>

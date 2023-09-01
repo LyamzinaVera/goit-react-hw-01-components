@@ -3,29 +3,28 @@ import style from 'components/Transaction/TransactionHistory.module.css';
 
 export const TransactionHistory = ({items}) => {
     return (
- <table className={style.transactionHistory}>
-   <thead>
-      <tr >
-        <th className={style.tableHead}>Type</th>
-        <th className={style.tableHead}>Amount</th>
-        <th className={style.tableHead}>Currency</th>
+    
+        <table className={style.transactionHistoryTable}>
+   <thead className={style.headerRow}>
+      <tr className={style.valuesRow}>
+        <th className={style.columnHeader}>Type</th>
+        <th className={style.columnHeader}>Amount</th>
+        <th className={style.columnHeader}>Currency</th>
       </tr>
   </thead>
   <tbody>
     {items.map(item => (
-     <tr key={id} className={style.tableData}>
-       <td className={style.tableDataCell}>{item.type}</td>
-       <td className={style.tableDataCell}>{item.amount}</td>
-       <td className={style.tableDataCell}>{item.currency}</td>
+     <tr key={item.id} className={style.valuesRow}>
+       <td className={style.transactionData}>{item.type}</td>
+       <td className={style.transactionData}>{item.amount}</td>
+       <td className={style.transactionData}>{item.currency}</td>
      </tr>
     ))}
   
   </tbody>
-  
-  
+  </table>
  
-</table>
-    )
+  )
 }
 
 TransactionHistory.protoType = {
